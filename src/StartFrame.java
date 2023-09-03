@@ -7,10 +7,11 @@ import java.io.File;
 import java.io.IOException;
 public class StartFrame extends JFrame {
     public StartFrame() {
-        addLabel();
         addButton();
+        addLabel();
+
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setPreferredSize(new Dimension(870,600));
+        this.setPreferredSize(new Dimension(1000,577));
         this.setLayout(null);
         this.setResizable(false);
         this.setTitle("Snake Game");
@@ -21,11 +22,11 @@ public class StartFrame extends JFrame {
         this.setIconImage(logo.getImage());
     }
     public void addButton(){
-        JButton startButton=new JButton("CLASSIC");
+        JButton startButton = new JButton("CLASSIC");
         startButton.setFont(new Font("MV Boli", Font.BOLD, 30));
-        startButton.setForeground(Color.white);
-        startButton.setBackground(new Color(0xF8A942));
-        startButton.setBounds(218, 416, 210, 67);
+        startButton.setForeground(new Color(0x350E00));
+        startButton.setBackground(new Color(0xC8842F));
+        startButton.setBounds(293, 416, 220, 50);
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,9 +48,9 @@ public class StartFrame extends JFrame {
 
         JButton adventureButton=new JButton("ADVENTURE");
         adventureButton.setFont(new Font("MV Boli", Font.BOLD, 30));
-        adventureButton.setForeground(Color.white);
-        adventureButton.setBackground(new Color(0xF8A942));
-        adventureButton.setBounds(435, 416, 270, 67);
+        adventureButton.setForeground(new Color(0x350E00));
+        adventureButton.setBackground(new Color(0xC8842F));
+        adventureButton.setBounds(550, 416, 220,50 );
         adventureButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -77,7 +78,7 @@ public class StartFrame extends JFrame {
         JLabel label=new JLabel();
         ImageIcon icon=new ImageIcon("src/resources/start.png");
         label.setIcon(icon);
-        label.setBounds(0,0,870,600);
+        label.setBounds(0,0,1000,577);
         label.setVisible(true);
         this.add(label);
     }
